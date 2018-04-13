@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Query 1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+  </head>
+  <body>
+    <ul class="nav nav-pills p-2">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Query 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="query_2.html">Query 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="query_3.html">Query 3</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="query_4.html">Query 4</a>
+      </li>
+    </ul>
+    <div class="container pt-2">
+      <h2>Query 1</h2>
+      <p>Display the order key, customer name, part name, supplier name, order date and extended price for each selected item.</p>
+
+      <form class="card">
+        <div class="card-body">
+        <h5 class="card-title">Filter</h5>
+        <div class="row">
+          <div class="form-group col-md-4">
+            <label for="cusID">Customer ID</label>
+            <input class="form-control" id="cusID" type="number" min="1" max="7500" placeholder="1 - 7500">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="partID">Part ID</label>
+            <input class="form-control" id="partID" type="number" min="1" max="10000" placeholder="1 - 10000">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="supID">Supplier ID</label>
+            <input class="form-control" id="supID" type="number" min="1" max="500" placeholder="1 - 500">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label class="control-label" for="startDate">Start Date</label>
+            <input type="text" class="form-control" id="startDate" name="startDate" placeholder="yyyy-mm-dd"/>
+          </div>
+          <div class="form-group col-md-6">
+            <label class="control-label" for="endDate">End Date</label>
+            <input type="text" class="form-control" id="endDate" name="endDate" placeholder="yyyy-mm-dd"/>
+          </div>
+          <input type="submit" class="btn btn-block btn-success mx-3" />
+        </div>
+        </div>
+      </form>
+
+      <table class="table table-sm table-striped mt-2">
+        <thead>
+          <tr>
+            <th scope="col">Item</th>
+            <th scope="col">Order Key</th>
+            <th scope="col">Customer Name</th>
+            <th scope="col">Part Name</th>
+            <th scope="col">Supplier Name</th>
+            <th scope="col">Order Date</th>
+            <th scope="col">Extended Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>Mark</td>
+            <td>Otto Part</td>
+            <td>ABC Supplier</td>
+            <td>yyyy-mm-dd</td>
+            <td>123.45</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- scripts !-->
+    <!-- js, jQuery, bootstrap !-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- datepicker !-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <!-- our scripts !-->
+    <script src="datepicker.js"></script>
+  </body>
+</html>
